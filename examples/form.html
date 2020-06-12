@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Wizard - a JavaScript jQuery Step Wizard plugin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Include SmartWizard CSS -->
+    <link href="dist/css/smart_wizard.css" rel="stylesheet" type="text/css" />
+    
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="jquery-ui.css">
+<script type="text/javascript">
+$(document).ready(function() {
+  var max_fields = 20; //maximum input boxes allowed
+  var wrapper = $(".input_fields_wrap"); //Fields wrapper
+  var add_button = $(".add_field_button"); //Add button ID
+
+  var x = 1; //initlal text box count
+  $(add_button).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (x < max_fields) { //max input box allowed
+      x++; //text box increment
+      $(wrapper).append('<div><table class="table table-hover table-striped"><tr><td>TITLE :<input type="text" name="mytext[]"/> </td><td>ONGOING OR COMPLETED :<input type="text" name="ongorcom[]"/> </td><td>FUNDING AGENCY : <input type="text" name="fund[]"/> </td><td>NAT OR INT :<input type="text" name="national[]"/></td><td>GRANT : <input type="text" name="grant[]"/></td><td>YEAR : <input type="text" name="year[]"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    x--;
+
+  })
+
+
+  var max_fields1 = 20; //maximum input boxes allowed
+  var wrapper1 = $(".input_fields_wrap1"); //Fields wrapper
+  var add_button1 = $(".add_field_button1"); //Add button ID
+
+  var y = 1; //initlal text box count
+  $(add_button1).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (y < max_fields1) { //max input box allowed
+      y++; //text box increment
+      $(wrapper1).append('<div><table class="table table-hover table-striped"><tr><td>TITLE : <input type="text" name="mytext1[]"/> </td><td>AUTHOR :<input type="text" name="author1[]"/> </td><td>YEAR : <input type="text" name="year1[]"/> </td><td>Publisher :<input type="text" name="publisher1[]"/></td><td>CITATION AGENCY : <input type="text" name="citationagency1[]"/></td><td>IMPACT FACTOR : <input type="text" name="impactfactor1[]"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+      //add input box
+    }
+  });
+
+  $(wrapper1).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    y--;
+
+  })
+
+  var max_fields2 = 20; //maximum input boxes allowed
+  var wrapper2 = $(".input_fields_wrap2"); //Fields wrapper
+  var add_button2 = $(".add_field_button2"); //Add button ID
+
+  var z = 1; //initlal text box count
+  $(add_button2).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (z < max_fields2) { //max input box allowed
+      z++; //text box increment
+      $(wrapper2).append('<div><table class="table table-hover table-striped"><tr><td>TITLE : <input type="text" name="mytext2[]"/> </td><td>AUTHOR :<input type="text" name="author2[]"/> </td><td>YEAR : <input type="text" name="year2[]"/> </td><td>Publisher :<input type="text" name="publisher2[]"/></td><td>CITATION AGENCY : <input type="text" name="citationagency2[]"/></td><td>IMPACT FACTOR : <input type="text" name="impactfactor2[]"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+  $(wrapper2).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    z--;
+
+  })
+
+
+  var max_fields3 = 20; //maximum input boxes allowed
+  var wrapper3 = $(".input_fields_wrap3"); //Fields wrapper
+  var add_button3 = $(".add_field_button3"); //Add button ID
+
+  var a = 1; //initlal text box count
+  $(add_button3).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (a < max_fields3) { //max input box allowed
+      a++; //text box increment
+      $(wrapper3).append('<div><table class="table table-hover table-striped"><tr><td>TITLE : <input type="text" name="mytext3[]"/> </td><td>AUTHOR :<input type="text" name="author3[]"/> </td><td>YEAR : <input type="text" name="year3[]"/> </td><td>Publisher :<input type="text" name="publisher3[]"/></td><td>CITATION AGENCY : <input type="text" name="citationagency3[]"/></td><td>IMPACT FACTOR : <input type="text" name="impactfactor3[]"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper3).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    a--;
+
+  })
+
+
+
+  var max_fields4 = 20; //maximum input boxes allowed
+  var wrapper4 = $(".input_fields_wrap4"); //Fields wrapper
+  var add_button4 = $(".add_field_button4"); //Add button ID
+
+  var b = 1; //initlal text box count
+  $(add_button4).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (b < max_fields4) { //max input box allowed
+      b++; //text box increment
+      $(wrapper4).append('<div><table class="table table-hover table-striped"><tr><td>TITLE : <input type="text" name="mytext4[]"/> </td><td>AUTHOR :<input type="text" name="author4[]"/> </td><td>YEAR : <input type="text" name="year4[]"/> </td><td>Publisher :<input type="text" name="publisher4[]"/></td><td>CITATION AGENCY : <input type="text" name="citationagency4[]"/></td><td>IMPACT FACTOR : <input type="text" name="impactfactor4[]"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper4).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    b--;
+
+  })
+
+
+  var max_fields5 = 20; //maximum input boxes allowed
+  var wrapper5 = $(".input_fields_wrap5"); //Fields wrapper
+  var add_button5 = $(".add_field_button5"); //Add button ID
+
+  var c = 1; //initlal text box count
+  $(add_button5).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (c < max_fields5) { //max input box allowed
+      c++; //text box increment
+      $(wrapper5).append('<div><table class="table table-hover table-striped"><tr><td>TITLE : <input type="text" name="mytext5[]"/> </td><td>AUTHOR :<input type="text" name="author5[]"/> </td><td>YEAR : <input type="text" name="year5[]"/> </td><td>Publisher :<input type="text" name="publisher5[]"/></td><td>CITATION AGENCY : <input type="text" name="citationagency5[]"/></td><td>IMPACT FACTOR : <input type="text" name="impactfactor5[]"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper5).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    c--;
+
+  })
+  var max_fields6 = 20; //maximum input boxes allowed
+  var wrapper6 = $(".input_fields_wrap6"); //Fields wrapper
+  var add_button6 = $(".add_field_button6"); //Add button ID
+
+  var d = 1; //initlal text box count
+  $(add_button6).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (d < max_fields6) { //max input box allowed
+      d++; //text box increment
+      $(wrapper6).append('<div><table class="table table-hover table-striped"><tr><td>TITLE : <input type="text" name="mytext6[]"/> </td><td>YEAR :<input type="text" name="year6[]"/> </td><td>NATIONAL OR INTERNATIONAL : <input type="text" name="national6[]"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper6).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    d--;
+
+  })
+
+
+  var max_fields7 = 20; //maximum input boxes allowed
+  var wrapper7 = $(".input_fields_wrap7"); //Fields wrapper
+  var add_button7 = $(".add_field_button7"); //Add button ID
+
+  var o = 1; //initlal text box count
+  $(add_button7).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (o < max_fields7) { //max input box allowed
+      o++; //text box increment
+      $(wrapper7).append('<div><table class="table table-hover table-striped"><tr><td>TITLE : <input type="text" name="mytext7[]"/> </td><td>YEAR :<input type="text" name="year7[]"/> </td><td>NATIONAL OR INTERNATIONAL : <input type="text" name="national7[]"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper7).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    o--;
+
+  })
+
+
+
+  var max_fields8 = 20; //maximum input boxes allowed
+  var wrapper8 = $(".input_fields_wrap8"); //Fields wrapper
+  var add_button8 = $(".add_field_button8"); //Add button ID
+
+  var f = 1; //initlal text box count
+  $(add_button8).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (f < max_fields8) { //max input box allowed
+      f++; //text box increment
+      $(wrapper8).append('<div><table class="table table-hover table-striped"><tr><td>NAME : <input type="text" name="mytext8[]"/> </td><td>YEAR :<input type="text" name="year8[]"/> </td><td>AWARDING AGENCY : <input type="text" name="award8[]"/> </td><td>NATIONAL OR INTERNATIONAL : <input type="text" name="national8[]"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper8).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    f--;
+
+  })
+
+
+  var max_fields9 = 20; //maximum input boxes allowed
+  var wrapper9 = $(".input_fields_wrap9"); //Fields wrapper
+  var add_button9 = $(".add_field_button9"); //Add button ID
+
+  var p = 1; //initlal text box count
+  $(add_button9).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (p < max_fields9) { //max input box allowed
+      p++; //text box increment
+      $(wrapper9).append('<div><table class="table table-hover table-striped"><tr><td>NAME : <input type="text" name="mytext9[]"/> </td><td>YEAR OF SERVING:<input type="text" name="year9[]"/> </td><td>NATIONAL OR INTERNATIONAL : <input type="text" name="national9[]"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper9).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    p--;
+
+  })
+
+  var max_fields10 = 20; //maximum input boxes allowed
+  var wrapper10 = $(".input_fields_wrap10"); //Fields wrapper
+  var add_button10 = $(".add_field_button10"); //Add button ID
+
+  var h = 1; //initlal text box count
+  $(add_button10).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (h < max_fields10) { //max input box allowed
+      h++; //text box increment
+      $(wrapper10).append('<div><table class="table table-hover table-striped"><tr><td>NAT OR INT : <input type="text" name="national10[]"/> </td><td>ATTENDED OR ORGANISED :<input type="text" name="attend10[]"/> </td><td>NAME : <input type="text" name="name10[]"/> </td><td>PLACE : <input type="text" name="place10[]"/> </td><td>DATE :<input type="date" name="date10[]"/> </td><td>SPONSORING AGENT : <input type="text" name="sponsor10[]"/> </td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper10).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    h--;
+
+  })
+
+
+  var max_fields11 = 20; //maximum input boxes allowed
+  var wrapper11 = $(".input_fields_wrap11"); //Fields wrapper
+  var add_button11 = $(".add_field_button11"); //Add button ID
+
+  var i = 1; //initlal text box count
+  $(add_button11).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (i < max_fields11) { //max input box allowed
+      i++; //text box increment
+      $(wrapper11).append('<div><table class="table table-hover table-striped"><tr><td>YEAR : <input type="text" name="year11[]"/></td><td> AMOUNT :<input type="text" name="amount11[]"/></td><td> <a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper11).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    i--;
+
+  })
+
+  var max_fields12 = 20; //maximum input boxes allowed
+  var wrapper12 = $(".input_fields_wrap12"); //Fields wrapper
+  var add_button12 = $(".add_field_button12"); //Add button ID
+
+  var j = 1; //initlal text box count
+  $(add_button12).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (j < max_fields12) { //max input box allowed
+      j++; //text box increment
+      $(wrapper12).append('<div><table class="table table-hover table-striped"><tr><td><table class="table table-hover table-striped"><tr><td><tr><td>College/ University/ Institution:</td><td><input type="text" name="coluniinstt12[]"/></td></tr><tr><td>Co-curricular Activities:</td><td><input type="text" name="cocurri12[]"/></td></tr><tr><td> Enrichment of Campus life (Hostels, sports.games):</td><td> <input type="text" name="campuslife12[]"/></td></tr><tr><td>Students Welfare and Discipline:</td><td> <input type="text" name="studwelfare12[]"/></td></tr><tr><td> Membership/ participation in bodies/ committees on Education:</td><td><input type="text" name="bodcommedu12[]"/></td></tr><tr><td> Professional Organization of Teachers: </td><td><input type="text" name="proforgteacher12[]"/></td></tr></td></tr></table><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper12).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    j--;
+
+  })
+
+  var max_fields13 = 20; //maximum input boxes allowed
+  var wrapper13 = $(".input_fields_wrap13"); //Fields wrapper
+  var add_button13 = $(".add_field_button13"); //Add button ID
+
+  var k = 1; //initlal text box count
+  $(add_button13).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (k < max_fields13) { //max input box allowed
+      k++; //text box increment
+      $(wrapper13).append('<div><table class="table table-hover table-striped"><tr><td>NAME : <input type="text" name="mytext13[]"/> </td><td>YEAR :<input type="text" name="year13[]"/> </td><td>GROUP BENEFITTED : <input type="text" name="benefit13[]"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper13).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    k--;
+
+  })
+
+
+  var max_fields14 = 20; //maximum input boxes allowed
+  var wrapper14 = $(".input_fields_wrap14"); //Fields wrapper
+  var add_button14 = $(".add_field_button14"); //Add button ID
+
+  var l = 1; //initlal text box count
+  $(add_button14).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (l < max_fields14) { //max input box allowed
+      l++; //text box increment
+      $(wrapper14).append('<div><table class="table table-hover table-striped"><tr><td><table class="table table-hover table-striped"><tr><td><tr><td>Revision/Design of Curriculum/ Syllabus :</td><td><input type="text" name="revdesign14[]"/></td></tr><tr><td>TEACHING METHODS :</td><td><input type="text" name="teachingmethods14[]"/></td></tr><tr><td> LABORATORY EXPERIMENTS :</td><td> <input type="text" name="labexp14[]"/></td></tr><tr><td>EVALUATION METHODS :</td><td> <input type="text" name="evalmethods14[]"/></td></tr><tr><td> Preparation of Resource Material :</td><td><input type="text" name="resourcemat14[]"/></td></tr><tr><td> Remedial Teaching/ Student Counselling : </td><td><input type="text" name="remtorstudcounselling14[]"/></td></tr><tr><td>ANY OTHER </td><td> <input type="text" name="other14[]"/></td></tr></td></tr></table><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper14).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    l--;
+
+  })
+
+  var max_fields15 = 20; //maximum input boxes allowed
+  var wrapper15 = $(".input_fields_wrap15"); //Fields wrapper
+  var add_button15 = $(".add_field_button15"); //Add button ID
+
+  var m = 1; //initlal text box count
+  $(add_button15).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (m < max_fields15) { //max input box allowed
+      m++; //text box increment
+      $(wrapper15).append('<div><table class="table table-hover table-striped"><tr><td>ATTENDED OR ORGANISED : <input type="text" name="attend15[]"/> </td><td>NAME :<input type="text" name="mytext15[]"/></td><td>YEAR : <input type="text" name="year15[]"/> </td><td>DURATION :<input type="text" name="duration15[]"/> </td><td>PLACE OR AGENCY : <input type="text" name="place15[]"/></td><td><a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper15).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    m--;
+
+  })
+
+
+  var max_fields16 = 20; //maximum input boxes allowed
+  var wrapper16 = $(".input_fields_wrap16"); //Fields wrapper
+  var add_button16 = $(".add_field_button16"); //Add button ID
+
+  var n = 1; //initlal text box count
+  $(add_button16).click(function(e) { //on add input button click
+    e.preventDefault();
+    if (n < max_fields16) { //max input box allowed
+      n++; //text box increment
+      $(wrapper16).append('<div><table class="table table-hover table-striped"><tr><td>RESEARCH GUIDANCE : <input type="text" name="research16[]"/></td><td>  <a href="#" class="remove_field">Remove</a></td></tr></table></div>'); //add input box
+    }
+  });
+
+  $(wrapper16).on("click", ".remove_field", function(e) { //user click on remove text
+    e.preventDefault();
+    $(this).parent('div').remove();
+    n--;
+
+  })
+
+  var wrap = $("#check");
+  $('.checkIt').bind('click', function() {
+    if ($(this).is(":checked")) {
+      document.getElementById('check').style.display = "block";
+
+    } else {
+      document.getElementById('check').style.display = "none";
+    }
+  });
+});
+
+</script>
+</head>
+<body>
+
+  <div class="container">
+    <br /> Please fill all the required details and submit at Step 7.
+
+    <br />
+    <br />
+
+    <!-- SmartWizard html -->
+    <div id="smartwizard">
+      <ul>
+        <li><a href="#step-1">Step 1<br /><small>Personal details</small></a></li>
+        <li><a href="#step-2">Step 2<br /><small>This is step description</small></a></li>
+        <li><a href="#step-3">Step 3<br /><small>This is step description</small></a></li>
+        <li><a href="#step-4">Step 4<br /><small>This is step description</small></a></li>
+        <li><a href="#step-5">Step 5<br /><small>This is step description</small></a></li>
+        <li><a href="#step-6">Step 6<br /><small>This is step description</small></a></li>
+        <li><a href="#step-7">Step 7<br /><small>This is step description</small></a></li>
+
+
+      </ul>
+
+      <div>
+        <main>
+          <form id="teacher" method="post" autocomplete="on">
+            <div id="step-1" class="container-fluid">
+              <table class="table table-hover table-striped">
+
+                <tr>
+                  <td>2) NAME: </TD>
+                  <TD>
+                    <input type="text" name="names" value="" size="100" autofocus required>
+                  </TD>
+                </TR>
+                <tr>
+                  <td>3) FACULTY: </TD>
+                  <TD>
+                    <input type="text" name="faculty" value="" list="faculties">
+                  </TD>
+                </TR>
+                <datalist id="faculties">
+                  <option value="Engineering & Technology">
+                </datalist>
+                <tr>
+                  <td>4) DEPARTMENT: </TD>
+                  <TD>
+                    <input type="text" name="department" value="" list="depts">
+                  </TD>
+                </TR>
+                <datalist id="depts">
+                  <option value="Applied Sciences and Humanities">
+                    <option value="Architecture">
+                      <option value="Civil Engineering">
+                        <option value="Electrical Engineering">
+                          <option value="Leather and Footwear Technology">
+                            <option value="Mechanical Engineering">
+                </datalist>
+                <tr>
+                  <td>4) EMAIL: </TD>
+                  <TD>
+                    <input type="email" name="email" value="">
+                  </TD>
+                </TR>
+                <tr>
+                  <td>5) QUALIFICATION: </TD>
+                  <TD>
+                    <input type="text" name="qualification" value="" list="quals">
+                  </TD>
+                </TR>
+                <datalist id="quals">
+                  <option value="Ph.D">
+                    <option value="M.Phil">
+                      <option value="PG">
+                        <option value="Graduate">
+                </datalist>
+                <tr>
+                  <td>6) YEAR OF BIRTH: </TD>
+                  <TD>
+                    <input type="text" name="yob" value="">
+                  </TD>
+                </TR>
+                <tr>
+                  <td>7) YEAR OF PH.d/M.Phil: </TD>
+                  <TD>
+                    <input type="text" name="yom" value="">
+                  </TD>
+                </TR>
+                <tr>
+                  <td>8) Whether NET / SLET/ JRE ?: </TD>
+                  <TD>YES? :
+                    <input type="checkbox" name="exam" value="YES" class="checkIt" />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <DIV id="check">JRE
+                      <input type="checkbox" name="exam1[]" value="JRE" class="checkIt1" /> YEAR
+                      <input type="text" name="yoe[]" value="" /> NET
+                      <input type="checkbox" name="exam1[]" value="NET" class="checkIt1" /> YEAR
+                      <input type="text" name="yoe[]" value="
+" /> SLET
+                      <input type="checkbox" name="exam1[]" value="SLET" class="checkIt1" />YEAR
+                      <input type="text" name="yoe[]" value="
+" />
+                    </DIV>
+                  </TD>
+                </TR>
+                <tr>
+                  <td>10) DATE OF BIRTH: </TD>
+                  <TD>
+                    <input type="date" name="dob" value="">
+                  </TD>
+                </TR>
+                <tr>
+                  <td>11) Date of Ist Continuous Appointment: </TD>
+                  <TD>
+                    <input type="date" name="cont" value="">
+                  </TD>
+                </TR>
+                <tr>
+                  <td>12) Date of Joining on Present Post: </TD>
+                  <TD>
+                    <input type="date" name="dateonpresent" value="">
+                  </TD>
+                </TR>
+                <tr>
+                  <td>13) Lien on the Post: </TD>
+                  <TD>
+                    <input type="text" name="lien" value="" list="liens">
+                  </TD>
+                </TR>
+                <datalist id="liens">
+                  <option value="Assistant Professor">
+                    <option value="Associate Professor">
+                </datalist>
+                <tr>
+                  <td>14) Year of Retirement: </TD>
+                  <TD>
+                    <input type="text" name="yearofretire" value="">
+                  </TD>
+                </TR>
+                <tr>
+                  <td>15) Present Designation: </TD>
+                  <TD>
+                    <input type="text" name="designation" value="" list="presdesigs">
+                  </TD>
+                </TR>
+                <datalist id="presdesigs">
+                  <option value="Assistant Professor">
+                    <option value="Assistant Professor S-2">
+                      <option value="Assistant Professor S-3">
+                        <option value="Associate Professor-CAS ">
+                </datalist>
+
+                <tr>
+                  <td>16) Nature of Appointment : </TD>
+                  <TD>
+                    <input type="text" name="appoint" value=>
+                  </TD>
+                </TR>
+                <tr>
+                  <td>17) Nature of Post : </TD>
+                  <TD>
+                    <input type="text" name="nature" value=>
+                  </TD>
+                </TR>
+                <tr>
+                  <td>18) PAN Number :</TD>
+                  <TD>
+                    <input type="text" name="pan" value=>
+                  </TD>
+                </TR>
+                <tr>
+                  <td>22) GENDER : </TD>
+                  <TD>
+                    <DIV id="check1">MALE
+                      <input type="radio" name="gender" value="male" /> FEMALE
+                      <input type="radio" name="gender" value="female">
+                    </DIV>
+                  </TD>
+                </TR>
+                <tr>
+                  <td>19) Adhar Card No : </TD>
+                  <TD>
+                    <input type="text" name="adhar">
+                  </TD>
+                </TR>
+                <tr>
+                  <td>21) Religion : </TD>
+                  <TD>
+                    <input type="text" name="religion">
+                  </TD>
+                </TR>
+                <tr>
+                  <td>23) Home State : </TD>
+                  <TD>
+                    <input type="text" name="home">
+                  </TD>
+                </TR>
+                <tr>
+                  <td>24) Specialization : </TD>
+                  <TD>
+                    <input type="text" name="special">
+                  </TD>
+                </TR>
+                <tr>
+                  <td>25) COURSES TAUGHT ?: </TD>
+                  <TD>
+                    <DIV id="check1">PH.d/M.Phil
+                      <input type="checkbox" name="course[]" value="PH.D/M.PHIL" /> UG
+                      <input type="checkbox" name="course[]" value="UG"> PG
+                      <input type="checkbox" name="course[]" value="PG"> INREGRATED UG/PG
+                      <input type="checkbox" name="course[]" value="integratedugpg"> OTHERS
+                      <input type="checkbox" name="course[]" value="other">
+                  </TD>
+                </TR>
+              </table>
+              <table class="table table-hover table-striped">
+                <tr>
+                  <td>
+                    <td>
+                      <input type="submit" class="login" name="start" value="SUBMIT">
+                    </td>
+                </tr>
+              </table>
+              </div>
+
+              <div id="step-2" class="container-fluid">
+                <div class="input_fields_wrap">
+                  <button class="add_field_button">27) Add Projects</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>PROJECT DETAILS </H1>
+
+
+
+                      <tr>
+                        <td> TITLE: </TD>
+                        <TD>
+                          <input type="text" name="mytext[]">
+                        </TD>
+                        <td> ONGOING OR COMPLETED: </TD>
+                        <TD>
+                          <input type="text" name="ongorcom[]">
+                        </TD>
+                        <td> FUNDING AGENCY: </TD>
+                        <TD>
+                          <input type="text" name="fund[]">
+                        </TD>
+                        <td> NAT OR INT: </TD>
+                        <TD>
+                          <input type="text" name="national[]">
+                        </TD>
+                        <td> GRANT: </TD>
+                        <TD>
+                          <input type="text" name="grant[]">
+                        </TD>
+                        <td> YEAR: </TD>
+                        <TD>
+                          <input type="text" name="year[]">
+                        </TD>
+                      </TR>
+
+
+                  </table>
+                </div>
+
+                <div class="input_fields_wrap1 col-md-8 ">
+                  <button class="add_field_button1">30) Add Papers</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>PAPER DETAILS </H1>
+
+
+
+                      <tr>
+                        <td> TITLE: </TD>
+                        <TD>
+                          <input type="text" name="mytext1[]">
+                        </TD>
+                        <td> AUTHOR: </TD>
+                        <TD>
+                          <input type="text" name="author1[]">
+                        </TD>
+                        <td> YEAR </TD>
+                        <TD>
+                          <input type="text" name="year1[]">
+                        </TD>
+                        <td> PUBLISHER: </TD>
+                        <TD>
+                          <input type="text" name="publisher1[]">
+                        </TD>
+                        <td> CITATION AGENCY: </TD>
+                        <TD>
+                          <input type="text" name="citationagency1[]">
+                        </TD>
+                        <td> IMPACT FACTOR: </TD>
+                        <TD>
+                          <input type="text" name="impactfactor1[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+
+
+
+
+
+
+
+
+
+              </div>
+              <div id="step-3" class="container-fluid">
+                <div class="input_fields_wrap2  col-md-8 ">
+                  <button class="add_field_button2">31) Add Monographs</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>MONOGRAPHS DETAILS </H1>
+
+
+
+                      <tr>
+                        <td> TITLE: </TD>
+                        <TD>
+                          <input type="text" name="mytext2[]">
+                        </TD>
+                        <td> AUTHOR: </TD>
+                        <TD>
+                          <input type="text" name="author2[]">
+                        </TD>
+                        <td> YEAR </TD>
+                        <TD>
+                          <input type="text" name="year2[]">
+                        </TD>
+                        <td> PUBLISHER: </TD>
+                        <TD>
+                          <input type="text" name="publisher2[]">
+                        </TD>
+                        <td> CITATION AGENCY: </TD>
+                        <TD>
+                          <input type="text" name="citationagency2[]">
+                        </TD>
+                        <td> IMPACT FACTOR: </TD>
+                        <TD>
+                          <input type="text" name="impactfactor2[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+
+                <div class="input_fields_wrap3  col-md-8 ">
+                  <button class="add_field_button3">32) Add Chapters in books</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>CHAPTERS IN BOOKS DETAILS </H1>
+
+
+
+                      <tr>
+                        <td> TITLE: </TD>
+                        <TD>
+                          <input type="text" name="mytext3[]">
+                        </TD>
+                        <td> AUTHOR: </TD>
+                        <TD>
+                          <input type="text" name="author3[]">
+                        </TD>
+                        <td> YEAR </TD>
+                        <TD>
+                          <input type="text" name="year3[]">
+                        </TD>
+                        <td> PUBLISHER: </TD>
+                        <TD>
+                          <input type="text" name="publisher3[]">
+                        </TD>
+                        <td> CITATION AGENCY: </TD>
+                        <TD>
+                          <input type="text" name="citationagency3[]">
+                        </TD>
+                        <td> IMPACT FACTOR: </TD>
+                        <TD>
+                          <input type="text" name="impactfactor3[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+
+                <div class="input_fields_wrap4  col-md-8 ">
+                  <button class="add_field_button4">33) Add Edited books</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>EDITED BOOKS DETAILS </H1>
+
+
+                      <tr>
+                        <td> TITLE: </TD>
+                        <TD>
+                          <input type="text" name="mytext4[]">
+                        </TD>
+                        <td> AUTHOR: </TD>
+                        <TD>
+                          <input type="text" name="author4[]">
+                        </TD>
+                        <td> YEAR </TD>
+                        <TD>
+                          <input type="text" name="year4[]">
+                        </TD>
+                        <td> PUBLISHER: </TD>
+                        <TD>
+                          <input type="text" name="publisher4[]">
+                        </TD>
+                        <td> CITATION AGENCY: </TD>
+                        <TD>
+                          <input type="text" name="citationagency4[]">
+                        </TD>
+                        <td> IMPACT FACTOR: </TD>
+                        <TD>
+                          <input type="text" name="impactfactor4[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+              </div>
+              <div id="step-4" class="container-fluid">
+                <div class="input_fields_wrap5  col-md-8 ">
+                  <button class="add_field_button5">34) Add Books with ISBN</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>BOOKS WITH ISBN DETAILS </H1>
+
+
+                      <tr>
+                        <td> TITLE: </TD>
+                        <TD>
+                          <input type="text" name="mytext5[]">
+                        </TD>
+                        <td> AUTHOR: </TD>
+                        <TD>
+                          <input type="text" name="author5[]">
+                        </TD>
+                        <td> YEAR </TD>
+                        <TD>
+                          <input type="text" name="year5[]">
+                        </TD>
+                        <td> PUBLISHER: </TD>
+                        <TD>
+                          <input type="text" name="publisher5[]">
+                        </TD>
+                        <td> CITATION AGENCY: </TD>
+                        <TD>
+                          <input type="text" name="citationagency5[]">
+                        </TD>
+                        <td> IMPACT FACTOR: </TD>
+                        <TD>
+                          <input type="text" name="impactfactor5[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+
+                <div class="input_fields_wrap6  col-md-8 ">
+                  <button class="add_field_button6">33) Details of Patents Filed/ Awarded (Last 5 Years) </button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>PATENTS DETAILS </H1>
+
+
+
+                      <tr>
+                        <td> NAME: </TD>
+                        <TD>
+                          <input type="text" name="mytext6[]">
+                        </TD>
+                        <td> YEAR: </TD>
+                        <TD>
+                          <input type="text" name="year6[]">
+                        </TD>
+                        <td> NATIONAL OR INTERNATIONAL </TD>
+                        <TD>
+                          <input type="text" name="national6[]">
+                        </TD>
+
+                      </TR>
+
+                  </table>
+                </div>
+
+                <div class="input_fields_wrap7  col-md-8 ">
+                  <button class="add_field_button7">33) ADD AGENCIES</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>AGENCIES DETAILS </H1>
+
+
+
+                      <tr>
+                        <td> NAME: </TD>
+                        <TD>
+                          <input type="text" name="mytext7[]">
+                        </TD>
+                        <td> YEAR: </TD>
+                        <TD>
+                          <input type="text" name="year7[]">
+                        </TD>
+                        <td> NATIONAL OR INTERNATIONAL </TD>
+                        <TD>
+                          <input type="text" name="national7[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+
+              </div>
+              <div id="step-5" class="container-fluid">
+                <div class="input_fields_wrap8  col-md-8 ">
+                  <button class="add_field_button8">33) ADD AWARDS</button>
+
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>AWARDS DETAILS </H1>
+
+
+                      <tr>
+                        <td> NAME: </TD>
+                        <TD>
+                          <input type="text" name="mytext8[]">
+                        </TD>
+                        <td> YEAR </TD>
+                        <TD>
+                          <input type="text" name="year8[]">
+                        </TD>
+                        <td> AWARDING AGENCY: </TD>
+                        <TD>
+                          <input type="text" name="award8[]">
+                        </TD>
+                        <td> NATIONAL OR INTERNATIONAL: </TD>
+                        <TD>
+                          <input type="text" name="national8[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+
+                <div class="input_fields_wrap9">
+                  <button class="add_field_button9  col-md-8 ">33) COMMITTEES BOARD</button>
+
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>COMMITTEES BOARD DETAILS </H1>
+
+
+
+                      <tr>
+                        <td> NAME: </TD>
+                        <TD>
+                          <input type="text" name="mytext9[]">
+                        </TD>
+                        <td> YEAR OF SERVING</TD>
+                        <TD>
+                          <input type="text" name="year9[]">
+                        </TD>
+                        <td> NATIONAL OR INTERNATIONAL: </TD>
+                        <TD>
+                          <input type="text" name="national9[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+
+                <div class="input_fields_wrap10  col-md-8 ">
+                  <button class="add_field_button10">33) CONFERENCE</button>
+
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>CONFERENCE DETAILS </H1>
+
+
+
+                      <tr>
+                        <td> NATIONAL OR INTERNATIONAL: </TD>
+                        <TD>
+                          <input type="text" name="national10[]">
+                        </TD>
+                        <td> ATTENDED OR ORGANISED: </TD>
+                        <TD>
+                          <input type="text" name="attend10[]">
+                        </TD>
+                        <td> NAME </TD>
+                        <TD>
+                          <input type="text" name="name10[]">
+                        </TD>
+                        <td> PLACE: </TD>
+                        <TD>
+                          <input type="text" name="place10[]">
+                        </TD>
+                        <td> DATE: </TD>
+                        <TD>
+                          <input type="date" name="date10[]">
+                        </TD>
+                        <td> SPONSORING AGENT: </TD>
+                        <TD>
+                          <input type="text" name="sponsor10[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+              </div>
+              <div id="step-6" class="container-fluid">
+                <div class="input_fields_wrap11  col-md-8 ">
+                  <button class="add_field_button11">33) CONSULTIES</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>CONSULTIES DETAILS </H1>
+
+
+
+                      <tr>
+                        <td> YEAR: </TD>
+                        <TD>
+                          <input type="text" name="year11[]">
+                        </TD>
+                        <td> AMOUNT: </TD>
+                        <TD>
+                          <input type="text" name="amount11[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+
+                <div class="input_fields_wrap12">
+                  <button class="add_field_button12  col-md-8 ">33) CORPORATE</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>CORPORATE DETAILS </H1>
+
+
+
+                      <td><b>College/ University/ Institution</b></td>
+                      <td>
+                        <input type="text" name="coluniinstt12[]">
+                      </td>
+                      <td><b>Co-curricular Activities</b></td>
+                      <td>
+                        <input type="text" name="cocurri12[]">
+                      </td>
+                      <td><b>Enrichment of Campus life (Hostels, sports.games)</b></td>
+                      <td>
+                        <input type="text" name="campuslife12[]">
+                      </td>
+                      <td><b>Students Welfare and Discipline</b></td>
+                      <td>
+                        <input type="text" name="studwelfare12[]">
+                      </td>
+                      <td><b>Membership/ participation in bodies/ committees on Education</b></td>
+                      <td>
+                        <input type="text" name="bodcommedu12[]">
+                      </td>
+                      <td><b>Professional Organization of Teachers</b></td>
+                      <td>
+                        <input type="text" name="proforgteacher12[]">
+                      </td>
+
+                      </TR>
+
+                  </table>
+                </div>
+
+                <div class="input_fields_wrap13">
+                  <button class="add_field_button13  col-md-8 ">33) EXTERNAL WORKS</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>EXTERNAL WORKS DETAILS </H1>
+
+
+
+                      <tr>
+                        <td> NAME: </TD>
+                        <TD>
+                          <input type="text" name="mytext13[]">
+                        </TD>
+                        <td>YEAR : </TD>
+                        <TD>
+                          <input type="text" name="year13[]">
+                        </TD>
+                        <td>GROUP BENEFITTED </TD>
+                        <TD>
+                          <input type="text" name="benefit13[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+              </div>
+
+              <div id="step-7" class="container-fluid">
+                <div class="input_fields_wrap14  col-md-8 ">
+                  <button class="add_field_button14">33) INNOVATIONS</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>INNOVATIONS DETAILS </H1>
+
+
+                      <div>
+                        <table class="table table-hover table-striped">
+                          <tr>
+                            <td></td>
+                          </TR>
+                          <tr>
+                            <td>Revision/Design of Curriculum/ Syllabus :</td>
+                            <td>
+                              <input type="text" name="revdesign14[]" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>TEACHING METHODS :</td>
+                            <td>
+                              <input type="text" name="teachingmethods14[]" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> LABORATORY EXPERIMENTS :</td>
+                            <td>
+                              <input type="text" name="labexp14[]" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>EVALUATION METHODS :</td>
+                            <td>
+                              <input type="text" name="evalmethods14[]" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> Preparation of Resource Material :</td>
+                            <td>
+                              <input type="text" name="resourcemat14[]" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> Remedial Teaching/ Student Counselling : </td>
+                            <td>
+                              <input type="text" name="remtorstudcounselling14[]" />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>ANY OTHER </td>
+                            <td>
+                              <input type="text" name="other14[]" />
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                  </table>
+                </div>
+
+                <div class="input_fields_wrap15">
+                  <button class="add_field_button15  col-md-8 ">33) RECHARGING</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>RECHARGING DETAILS </H1>
+
+
+
+                      <tr>
+                        <td> ATTENDED OR ORGANISED: </TD>
+                        <TD>
+                          <input type="text" name="attend15[]">
+                        </TD>
+                        <td> NAME </TD>
+                        <TD>
+                          <input type="text" name="mytext15[]">
+                        </TD>
+                        <td> YEAR: </TD>
+                        <TD>
+                          <input type="text" name="place15[]">
+                        </TD>
+                        <td> DURATION: </TD>
+                        <TD>
+                          <input type="text" name="duration15[]">
+                        </TD>
+                        <td> PLACE OR AGENCY: </TD>
+                        <TD>
+                          <input type="text" name="place15[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+
+                <div class="input_fields_wrap16  col-md-8">
+                  <button class="add_field_button16">33) RESEARCH GUIDANCE</button>
+                  <table class="table table-hover table-striped">
+
+                    <center>
+                      <H1>RESEARCH GUIDANCE DETAILS </H1>
+
+
+
+                      <tr>
+                        <td> RESEARCH GUIDANCE: </TD>
+                        <TD>
+                          <input type="text" name="research16[]">
+                        </TD>
+                      </TR>
+
+                  </table>
+                </div>
+
+                <table class="table table-hover table-striped">
+                  <tr>
+                    <td>
+                      <td>
+                        <input type="submit" class="login" name="start" value="SUBMIT">
+                      </td>
+                  </tr>
+                </table>
+
+
+        </main>
+        </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	 <!-- Include jQuery Validator plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+
+    <!-- Include SmartWizard JavaScript source -->
+    <script type="text/javascript" src="dist/js/jquery.smartWizard.min.js"></script>
+
+    <script type="text/javascript">
+       $(document).ready(function(){
+            
+            // Step show event 
+            $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
+               //alert("You are on step "+stepNumber+" now");
+               if(stepPosition === 'first'){
+                   $("#prev-btn").addClass('disabled');
+               }else if(stepPosition === 'final'){
+                   $("#next-btn").addClass('disabled');
+               }else{
+                   $("#prev-btn").removeClass('disabled');
+                   $("#next-btn").removeClass('disabled');
+               }
+            });
+            
+            // Toolbar extra buttons
+            var btnFinish = $('<button></button>').text('Logout')
+                                             .addClass('btn btn-info')
+                                             .on('click', function(){ window.location.replace("logout.php"); });
+            var btnCancel = $('<button></button>').text('Go to home page')
+                                             .addClass('btn btn-danger')
+                                             .on('click', function(){ window.location.replace("filled.php"); });                         
+            
+            
+            // Smart Wizard
+            $('#smartwizard').smartWizard({ 
+                    selected: 0, 
+                    theme: 'default',
+                    transitionEffect:'fade',
+                    showStepURLhash: true,
+                    toolbarSettings: {toolbarPosition: 'both',
+                                      toolbarExtraButtons: [btnFinish, btnCancel]
+                                    }
+            });
+                                         
+            
+            // External Button Events
+            $("#reset-btn").on("click", function() {
+                // Reset wizard
+                $('#smartwizard').smartWizard("reset");
+                return true;
+            });
+            
+            $("#prev-btn").on("click", function() {
+                // Navigate previous
+                $('#smartwizard').smartWizard("prev");
+                return true;
+            });
+            
+            $("#next-btn").on("click", function() {
+                // Navigate next
+                $('#smartwizard').smartWizard("next");
+                return true;
+            });
+            
+            $("#theme_selector").on("change", function() {
+                // Change theme
+                $('#smartwizard').smartWizard("theme", $(this).val());
+                return true;
+            });
+            
+            // Set selected theme on page refresh
+            $("#theme_selector").change();
+        });   
+    </script>  
+	  <script type="text/javascript">
+        $(document).ready(function(){
+            
+            // Toolbar extra buttons
+            var btnFinish = $('<button></button>').text('Finish')
+                                             .addClass('btn btn-info')
+                                             .on('click', function(){ 
+                                                    if( !$(this).hasClass('disabled')){ 
+                                                        var elmForm = $("#myForm");
+                                                        if(elmForm){
+                                                            elmForm.validator('validate'); 
+                                                            var elmErr = elmForm.find('.has-error');
+                                                            if(elmErr && elmErr.length > 0){
+                                                                alert('Oops we still have error in the form');
+                                                                return false;    
+                                                            }else{
+                                                                alert('Great! we are ready to submit form');
+                                                                elmForm.submit();
+                                                                return false;
+                                                            }
+                                                        }
+                                                    }
+                                                });
+            var btnCancel = $('<button></button>').text('Cancel')
+                                             .addClass('btn btn-danger')
+                                             .on('click', function(){ 
+                                                    $('#smartwizard').smartWizard("reset"); 
+                                                    $('#myForm').find("input, textarea").val(""); 
+                                                });                         
+            
+            
+            
+            // Smart Wizard
+            $('#smartwizard').smartWizard({ 
+                    selected: 0, 
+                    theme: 'dots',
+                    transitionEffect:'fade',
+                    toolbarSettings: {toolbarPosition: 'bottom',
+                                      toolbarExtraButtons: [btnFinish, btnCancel]
+                                    },
+                    anchorSettings: {
+                                markDoneStep: true, // add done css
+                                markAllPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
+                                removeDoneStepOnNavigateBack: true, // While navigate back done step after active step will be cleared
+                                enableAnchorOnDoneStep: true // Enable/Disable the done steps navigation
+                            }
+                 });
+            
+            $("#smartwizard").on("leaveStep", function(e, anchorObject, stepNumber, stepDirection) {
+                var elmForm = $("#form-step-" + stepNumber);
+                // stepDirection === 'forward' :- this condition allows to do the form validation 
+                // only on forward navigation, that makes easy navigation on backwards still do the validation when going next
+                if(stepDirection === 'forward' && elmForm){
+                    elmForm.validator('validate'); 
+                    var elmErr = elmForm.children('.has-error');
+                    if(elmErr && elmErr.length > 0){
+                        // Form validation failed
+                        return false;    
+                    }
+                }
+                return true;
+            });
+            
+            $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection) {
+                // Enable finish button only on last step
+                if(stepNumber == 3){ 
+                    $('.btn-finish').removeClass('disabled');  
+                }else{
+                    $('.btn-finish').addClass('disabled');
+                }
+            });                               
+            
+        });   
+    </script>  
+</body>
+</html>
