@@ -12,30 +12,31 @@ User guide-
 Teachers’ Data Application Guide
 
 Enter your employee id and password. Default password is 12345. It is highly desirable to change your password after logging in.
- 
+![](images/1.png)
 After logging in, you will be able to see your data present in the Application. You need to verify and rectify the information at every step. 
- 
+ ![](images/2.png)
 If you have made any changes, make sure to press the submit button at the end of the page so that your data is saved. You may also submit at the last step after filling all the information till Step 7. 
- 
+ ![](images/3.png)
 To go to the next step you need to press the Next button. To Logout, press the Logout button. And once your data is verified you may go to the home page.
-
+![](images/4.png)
 At Step 2, you can enter all your publication details. To add another paper, please click on Add papers button. To delete any existing papers, please click on the dustbin icon at the right most of that record. Please make sure the month and year are entered correct and only numbers else it would not be updated. Also make sure to spell National/International and Conference/Journal correctly while making the entry. Similarly you can enter Monograph details.
- 
- 
+ ![](images/5.png)
+ ![](images/6.png)
 At Step 3, please enter any book details if present.
- 
+ ![](images/7.png)
 Similarly steps 4, 5, 6 and 7 need to be filled out.
- 
- 
- 
- 
+ ![](images/8.png)
+ ![](images/9.png)
+ ![](images/10.png)
+ ![](images/11.png)
+  
 Once all steps are reviewed and latest data is fed, please click on submit. If all data is fine and no changes made, then you may logout or Go to home page.
 At the home page, you will find all your data fed and you can view and verify it. To update it, please press the update button.
 To change password, you can click the Change password button on the home page.
- 
+ ![](images/12.png)
 To change your password you need to click on send OTP button. An OTP will be sent to your email. In case email is wrong or blank, please update it first in the system.
 Once the OTP is received, kindly enter it in the input box. Also enter your current and new password, and click on reset password button to reset your password. You will be logged out and need to login using your new password now.
- 
+ ![](images/13.png)
 
 These are the features of the project available with this code. 
 Further features which I have added for use for my University are mentioned below to give you an idea for your improvements-
