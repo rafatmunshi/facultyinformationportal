@@ -39,17 +39,7 @@ Once the OTP is received, kindly enter it in the input box. Also enter your curr
  ![](images/13.png)
 
 These are the features of the project available with this code. 
-Further features which I have added for use for my University are mentioned below to give you an idea for your improvements-
-1.	Current subjects of the teachers and students enrolled in them can be checked and updated.
-2.	Class/subject teacher can access information of student of his/her class, access marks of student of all subject, mark attendance of his/her class and Class/subject teacher can feed remark for report card
-3.	Add Chapter to each subject with deadline. Teacher entry on completion of chapter and Syllabus completion analysis
-4.	Teacher daily activity entry and register.
-5.	Security issues fixed-
-•	Viewlogs displays all the logs. You might not want to display this information to general public.
-•	Takebackup.php file downloads your entire database and possible confidential information by simply calling it via browser. Delete it if you don’t want this.
-•	Password is stored as text in database. This makes it vulnerable to SQL injections. Use better ways or OpenSSL or consider this- https://medium.com/@longtermsec/how-to-handle-passwords-securely-in-your-apps-e8f182e189a
-•	Sending Email- uses the old mail() function instead of a full-fledged mail library that supports SMTP-AUTH (and possibly encryption) for security. 
-•	OTP expiry time is not set. Set it for better security.
+
 Frontend test cases-
 1.	Localhost/facultyinformationportal should open the homepage with two login boxes as shown in the user guide.
 2.	Without putting in any credentials or only one credential, an error message is displayed.
@@ -70,5 +60,18 @@ Backend test cases- I have written down sample test cases which were used during
 16.	Everytime a teachers updates/deletes any data, a log regarding that is created in the mylogs table of the database.
 17.	With url localhost/Facultyinformationportal/viewlogs, a list of all the logs is displayed.
 
-Please suggest any bugs or improvements. With your help we can make this a better project.
+Please suggest any bugs or improvements.
+
+Further features which I have added for use for my University are mentioned below to give you an idea for your improvements-
+1.	Current subjects of the teachers and students enrolled in them can be checked and updated.
+2.	Class/subject teacher can access information of student of his/her class, access marks of student of all subject, mark attendance of his/her class and Class/subject teacher can feed remark for report card
+3.	Add Chapter to each subject with deadline. Teacher entry on completion of chapter and Syllabus completion analysis
+4.	Teacher daily activity entry and register.
+5.	Security issues fixed-
+•	Viewlogs displays all the logs. You might not want to display this information to general public.
+•	Takebackup.php file downloads your entire database and possible confidential information by simply calling it via browser. Delete it if you don’t want this.
+•	Password is stored as text in database. This makes it vulnerable to SQL injections. Use better ways or OpenSSL or consider this- https://medium.com/@longtermsec/how-to-handle-passwords-securely-in-your-apps-e8f182e189a
+•	Sending Email- uses the old mail() function instead of a full-fledged mail library that supports SMTP-AUTH (and possibly encryption) for security. 
+•	OTP expiry time is not set. Set it for better security.
+
 
